@@ -1,0 +1,385 @@
+/* FUENTE POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* SELECTOR UNIVERSAL */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "poppins",sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+header{
+  width: 100%;
+  height: 70px;
+  background: #000;
+  color: #fff;
+  position: fixed;
+}
+
+
+header > .container__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header > .container__header > .container__img{
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container__img > a > img{
+  width: 45px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.container__img > h3{
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.container__bars{
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container__bars > i{
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+
+nav{
+  display: none;
+}
+
+
+
+/* COVER */
+.container__meat{
+  display: none;
+}
+
+.container__cover{
+  color: #fff;
+}
+
+.hero__img{
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
+  )
+  ,url(imagenes/cover/pexels-kat-smith-735968.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__text{
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container__text > h2{
+  font-weight: 600;
+}
+
+.container__text > p{
+  font-size: 12px;
+  font-weight: 200;
+  width:290px;
+}
+
+.container__text > .container__input{
+  display: flex;
+  margin-top: 15px;  
+
+}
+
+.container__text > .container__input > input{
+  margin: 0px 20px 0px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 0px;
+  border: 0px;
+  width: 120px;
+  height: 36px;
+  text-align: center;
+}
+
+.container__text > .container__input > input:first-child{
+  background: #000;
+  color: #fff;
+}
+
+
+/* ENTREGA A DOMICILIO */
+
+
+#section__domicilio{
+  margin-top: 50px;
+}
+
+.container__domicilio > .container__title{
+  width: 100%;
+  text-align: center;
+}
+.container__domicilio > .container__title > h4{
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/* ENTREGA A DOMICILIO [CARDS] */
+
+.container__cards{
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__cards > .cards{
+  width: 250px;
+  margin: 20px;
+  height: 300px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.container__cards > .cards > h3{
+  font-weight: 500;
+  opacity: 0.3;
+  color: #000;
+}
+
+.container__cards > .cards > p{
+  width: 100%;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.container__cards > .cards > img{
+  width: 100px;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width:1024px){
+  header{
+    width: 100%;
+  }
+
+  header > .container__header{
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  /* nav */
+  nav{
+    display: block;
+  }
+
+  nav > ul{
+    display: flex;
+  }
+
+  nav > ul > li{
+    list-style: none;
+  }
+
+  nav > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+
+  .container__bars{
+    display: none;
+  }
+
+/* nav > submenu */
+  nav > ul > li > .submenu__productos{
+    position: absolute;
+    top: 100px;
+    opacity: 0;
+    margin-left: 17px;
+    background: #fff;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  nav > ul > li:hover > .submenu__productos{
+    position: absolute;
+    top:70px;
+    visibility: visible;        
+    opacity: 1;
+  }
+
+  nav > ul > li{
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  nav > ul > li .submenu__productos > li > a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    width: 180px;
+    font-size:15px;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  nav > ul > li .submenu__productos > li > a:hover{
+    background: #111;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  nav > ul > li > ul > li{
+    list-style: none;
+  }
+
+  /* COVER */
+  .container__cover > .hero__img{
+    width: 100%;
+  }
+
+
+  .container__padre{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container__padre > .container__text{
+    height: 100vh;  
+  }
+
+  .container__padre > .container__text > h2{
+    font-size: 45px;
+    text-align: start;
+    width: 520px;    
+  }
+  
+  .container__padre > .container__text > p{
+    text-align: start;
+    width: 520px;
+    font-size: 17px;
+  }
+
+  .container__padre > .container__text > .container__input{
+    width: 100%;
+  }
+
+  .container__padre > .container__text > .container__input > input{
+    height:40px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .container__padre > .container__meat{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100vh;
+    width: 650px;
+  }
+
+  .container__padre > .container__meat > img{
+    display: flex;
+  }
+
+  /* ENTREGA A DOMICILIO */
+  .container__domicilio{
+    width: 100%;
+  }
+
+
+  .container__domicilio > .container__title > h2{
+    font-size:50px;
+  }
+  .container__domicilio > .container__title > h4{
+    font-size:17px;
+  }
+  
+  .container__domicilio > .container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

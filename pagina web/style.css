@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* SELECTOR UNIVERSAL */
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family:"poppins",sans-serif;
+}
+/* BODY */
+body{
+  background: #bbb5b5;
+}
+/* NAV HEADER */
+#sidebar-nav{
+  width: 300px;
+  height: 100vh;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
+  list-style: none;
+}
+.menu__sidebar__div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  justify-content: space-between;
+
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+header > .img--text > span > img{
+  border-radius:50%;
+  margin-right: 10px;
+  cursor: pointer;
+
+}
+
+.arrow-right{
+  padding: 8px;
+  color: #fff;
+  margin-left: auto;
+  background:#aa0aaa;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+/* MENU */
+.menu__ul{
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.menu__ul > li > div {
+  width: 103%;
+  display: flex;
+  align-items: center;
+  padding-block: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  background: #e0e0e0;
+}
+
+
+.menu__ul > li > div > input{
+  width:80%;
+  outline: 0px;
+  border: 0px;
+  background: #e0e0e0;
+  font-size: 17px;
+  resize: none;
+}
+.menu__ul > li > div > i{
+  margin-right: 10px;
+  margin-left:3px;
+}
+
+
+.menu__ul > li{
+  padding: 20px 0px;
+  list-style: none;
+  margin: 0px;
+  width: 100%;
+}
+.menu__ul > .menu__link{
+  border-radius:15px;
+  cursor: pointer;
+}
+.menu__ul > .menu__link:hover{
+  background: #e0e0e0;
+
+}
+
+.menu__ul > li > a{
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.menu__ul > li > a > i{
+  margin-right: 10px;
+}
+
+/* REGISTER - LOGOUT */
+.logout__container{
+  margin-left: 10px;
+  text-align: start;
+  position: absolute;
+  bottom: 2%;
+  font-size: 18px;
+}
+
+.logout__container > li > a > i{
+  margin-right: 12px;
+}
+.logout__container > li{
+  width: 200%;
+
+}
+.logout__container > li > a{
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  display: block;
+}
+
+.dark-mode{
+  display: flex;
+  padding:25px 0px;
+}
+
+.container__sol-y-luna > .moon{
+  display:none;
+
+}
+
+.container__sol-y-luna > .sun{
+  margin-right: 7px;
+
+}
+li > span{
+  cursor: pointer;
+
+}
+
