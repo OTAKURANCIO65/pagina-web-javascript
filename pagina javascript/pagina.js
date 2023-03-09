@@ -1,1031 +1,975 @@
-/*
-IF Y ELSE =
-*/
+// 9) (TRUE) Programa una función que obtenga un numero aleatorio entre 501 y 600.
 
-/*
-CREAR SOLUCION 1 = TRUE;
-Crear un programa que determine si un número introducido en un Prompt es par o no, la respuesta será mostrada en una alerta.*/
-
-// CREAR SOLUCION 1 = TRUE;
-// let pregunta = prompt("Este numero es par");
-// let numero = pregunta;
-
-
-// if(pregunta == 20){  
-//   alert(`Si es par porque es el numero ${numero}`);
+// let numeroAleatorio = (numeroMenor,numeroMayor) =>{
+//   let res1 = Math.round(Math.random()*(numeroMenor - numeroMayor))+numeroMayor;
+//   console.log(res1);
 // }
 
-// else{
-//   alert(`No es par porque el numero es ${numero}`);
+// numeroAleatorio(500,600);
 
+// let numeroRandom = () =>{
+//   let resRandom = Math.random()*100;
+//   let result = Math.round(resRandom)+500;
+//   console.log(result); 
+// }
+// numeroRandom();
+
+// ADQUIRIR MAS Y MAS CONOCIMIENTO 
+
+
+
+// console.log(Math.sign(20-40))
+
+
+// 10)(TRUE)Programa una función que reciba un número y evalúe si es capicúa o no que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+/* hola como estas todo bien yo queria decirte algo y que practica y veras que podras hacerlo */
+
+// const capicua = (numero = 0) =>{
+//   if(!numero){console.warn("No ingresaste ningun numero correctamente")};
+//   if(typeof numero !== "number"){console.error(`Tu valor ingresado (${numero}) no es un numero`)};
+
+//   numero = numero.toString();
+//   let alReves = numero.split("").reverse().join("");
+
+//   return (numero === alReves)   
+//   ? console.log(`Si es capicua,el numero ingresado == ${numero} y el numero al reves ${alReves}`)
+//   : console.log(`No es capicua,el numero ingresado == ${numero} y el numero al reves ${alReves}`);
 // }
 
+// capicua(504);
 
 
-/*
-CREAR SOLUCION 2 = TRUE;
-Crear un programa que determine si un número introducido en un Prompt es divisible por 5 o no, mostrar el resultado con console.log
-*/
-// SOLUCION 2 = TRUE;
-// let pregunta = prompt("¿Este numero es divisible por 5?");
-// let numero = 5;
+// 11) (TRUE) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
 
+// const factorial = (numero = undefined) =>{
+//   if(numero === undefined) return console.warn("No ingresaste ningun numero");
+//   if(typeof (numero) !== "number") return console.error(`El valor ${numero} no es un numero`); 
+//   if(numero === 0) return console.error(`El valor ${numero} no se puede factorizar`);
+//   if(numero === 1) return console.error(`El valor ${numero} no se puede factorizar`);
+//   if(Math.sign(numero) === -1) return console.error(`El valor numerico no puede ser negativo`);
 
-// if((pregunta % numero) == 0){
-//   console.log("Tu numero es divisible con 5");
+//   let factorial = 1;
+
+//   for(let i = numero; i > 1; i--){
+//     factorial = factorial*i;
+//   };
+
+//   return console.log(`El factorial de ${numero} es ${factorial}`);
 // }
 
+// factorial(5);
 
-// else{
-//   console.log("Tu numero no es divisible a 5");
-// }
+// 12)(TRUE)Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
+// const numberCousin = (numPrimo) =>{
+//   if(!numPrimo) return console.warn("No ingresaste ningun numero");
+//   if(typeof(numPrimo) === "string") return console.error(`El valor ${numPrimo} no es un numero`);
+//   if(numPrimo === 0) return console.error(`El valor no puede ser 0`);
+//   if(numPrimo === 1) return console.error(`El valor no puede ser 1`);
+//   if(Math.sign(numPrimo) === -1) return console.error(`El valor no puede ser negativo`);
 
-/*
-CREAR SOLUCION 3 = TRUE;
-Crear un programa que determine si un número introducido en un prompt es divisible por 11 y 5 o no, mostrar el resultado con console.log
-// */
-// let pregunta = parseInt(prompt("Tu numero es divisible con 11 y 5"));
+//   let divisible = false;
 
-
-// const numero1 = (number) =>{
-//   if((parseInt(pregunta) % number) == 0){
-//     console.log(`Tu numero ${pregunta} es divisible`);
-    
-//   }else{
-//     console.log(`Tu numero ${pregunta} no es divisible`);
+//   for(let i = 2; i < numPrimo; i++){
+//     if((numPrimo % i) === 0){divisible = true; break;};
 //   }
-// }
-// numero1(5)
 
-// const numero2 = (number2) =>{
-//   if((parseInt(pregunta) % number2) == 0){
-//     console.log(`Tu numero ${pregunta} es divisible`);
-//   }else{
-//     console.log(`Tu numero ${pregunta} no es divisible`);
-//   }
-// }
-// numero2(11)
-
-// const numero3 = (number3) =>{
-//   if((parseInt(pregunta) % number3) == 0){
-//     console.log(`Tu numero ${pregunta} es divisible`);
-//   }else{
-//     console.log(`Tu numero ${pregunta} no es divisible`);
-//   }
-// }
-// numero3(20);   
-
-
-
-/*
-CREAR SOLUCION 4 = TRUE;
-Crear un programa que le pida al usuario dos números en un Prompt y luego muestre en un alerta el número mayor.
-*/
-
-// let numero1 = parseInt(prompt("Dime tu numero 1"));
-// let numero2 = parseInt(prompt("Dime tu numero 2"));
-
-// if(numero1 > numero2){
-//   alert(`Tu numero mayor es ${numero1}`);
+//   return (divisible)
+//   ? console.log(`No es un numero primo el ${numPrimo}`) 
+//   : console.log(`Si es un numero primo el ${numPrimo}`);
 // }
 
-// else{
-//   alert(`Tu numero menor es ${numero2}`);
+// numberCousin(12);
+
+
+
+
+
+// 13)(TRUE)Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+// const numerosPares = (numero = undefined) =>{
+
+//   if(!numero) return console.warn(`No ingresaste ningun numero`);
+//   if(typeof(numero) === "string") return console.error(`El valor ingresado ${numero} no es un numero`);
+//   if(numero === 1) return console.error(`El valor ${numero} no se puede dividir`);
+//   if(Math.sign(numero) === -1) return console.error(`El valor no puede ser negativo`);
+
+
+//   return (numero % 2 === 0)
+//   ? console.log(`Tu valor ingresado ${numero} es un numero par`)
+//   : console.log(`Tu valor ingresado ${numero} es un numero impar`);
 // }
 
-
-/*
-CREAR SOLUCION 5 = TRUE;
-Crear un programa que le pida al usuario primero un número a través de un prompt y luego un segundo número para luego mostrar en un alerta el número mayor, esta vez realizar el ejercicio ocupando un if ternario.
-*/
+// numerosPares(5);
 
 
-// let numero1 = parseInt(prompt("Dame un numero"));
-// let numero2 = parseInt(prompt("dame un segundo numero"));
 
-// if(numero1 > numero2){
-//   alert(`Tu numero mayor es ${numero1}`);
-// }else{
-//   alert(`Tu numero menor es ${numero2}`);
+
+
+
+
+
+// 14)(TRUE)Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+// const convertirGrados = (grados = undefined , unidad = undefined) => {
+//   if(!grados) return console.warn(`The value is not a ingress`);
+//   if(Math.sign(grados) === -1) return console.error(`Not accept value negatives`);
+//   if(typeof(grados) === "string") return console.error(`The value ingress is not a number`);
+
+//   if(unidad === "C"){console.log(`Tu resultado celcius (${grados}°C == ${Math.round(grados * 9/5 + 32)}°F)`)};
+
+//   if(unidad === "F"){console.log(`Tu resultado en farenheit (${grados}°F == ${Math.round(grados - 32 * 5/9)}°C)`)}
+//   else{console.error(`Los valores no son admitidos`)};
 // }
 
+// convertirGrados(2,"C");
+// convertirGrados(4,"F");
 
+// 15) Programa una función para convertir números de bases binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 bases 10.
 
-/*
-CREAR SOLUCION 6 = true;
-Crear un programa que determine si un string introducido por un usuario empieza con un número o con una letra.
-*/
-
-// let pregunta = prompt("Poneme tu string");
-
-// if(parseInt(pregunta)){
-//   alert("Nesesito que me pongas texto y no numeros");
-// }
-// else{
-//   alert("Que bien que me pusiste texto");
-// }
-
-
-/*
-CREAR SOLUCION 7 = 
-Crear un programa donde se introduzcan los tres ángulos internos de un triángulo y se determine si el triángulo es válido o no.
-  */
-
-
-
-
-
-
-
-
-
-/*
-CREAR SOLUCION 8 = TRUE;
-Determinar si una palabra empieza con mayúscula o no.
-*/
-
-// let pregunta = prompt(["Estas palabras son mayusculas"]);
-// let preguntaUpper = pregunta.toUpperCase();
-// let preguntaLongitud = pregunta.length.toString();
-
-// if(pregunta == preguntaUpper){
-//   alert("Las palabras son mayusculas");
-
-// }
-// if(pregunta == ){
-//   alert("El primer caracter es mayuscula");
-// }
-
-
-// else{
-//   alert("Tu palabras son minusculas");
-// }
-
-
-
-/*
-CREAR SOLUCION 9 = indeterminado
-Determinar si un año dado tiene 366 dias.
-*/
-
-
-
-
-
-
-
-/*
-CREAR SOLUCION 10 = TRUE;
-Escribir un programa JavaScript en el que el programa escoge al azar un entero entre 1 y 10, el usuario , luego a el usuario se le pedirá que introduzca un número en un prompt para intentar adivinarlo. Si la entrada del usuario coincide con el número de conjetura, el programa mostrará un mensaje de "buen trabajo" de lo contrario mostrará un mensaje de "No corresponde"
-*/
-
-// let preguntaAdivinanza = parseInt(prompt("Adivina del 1 al 10"))
-// let concatenacion =  Math.random(preguntaAdivinanza) * 10;
-// let resultado = Math.round(concatenacion);
-
-
-// if(resultado == 5){
-//   alert("felicidades amigo tu numero es correcto por ende te ganaste un hostinger gratuito");
-// }
-
-// else{
-//   alert("Incorrecto amigo no lo adivinaste");
-// }
-
-
-// document.write(resultado);
-
-
-// CREAR SOLUCION 11 = TRUE;
-// El siguiente código tiene un error que se produce en algunos casos especiales, descubrirlo y arreglarlo:
-
- // Obtener edad
-
-//   let edad = 13;
-
-//  if(edad <= 13) {
-//  	console.log("Es niño");
-//  }
-//  if(edad < 18 ){
-//   	console.log("Es adolecente");
-//  }
-//  else{
-//     console.log("Es adolecente");
-//  }
-
-
-// LOOPS == BUCLES
-// ### WHILE
-
-/*
-CREAR SOLUCION 1 = TRUE;
-Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa el usuario en un prompt.
-*/
-
-// let pregunta = parseInt(prompt("Pone cualquier numero y te dare del 0 hasta el numero que quieras"));
-
-
-// while(pregunta < 300 && Infinity){
-//   pregunta++;
-//   document.write(pregunta + "<br>");
-// }
-
-
-/*
-CREAR SOLUCION 2 = TRUE;
-Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario en un prompt.
-*/
-
-// let pregunta = prompt("Ingresa cualquier numero y te dare el doble");
-
-
-// while(pregunta < 400){
-//   pregunta++;
-//   document.write( pregunta * 2 + "<br>");
+// const convertirNumerosbases = (numero = undefined , bases = undefined) =>{
+//   if(numero === undefined) return console.warn(`No pusiste ningun valo numerico hasta el momento`);
+//   if(typeof numero !== "number") return console.error(`El valor ${numero} no es un numero`);
   
-// }
+//   if(bases  === undefined) return console.warn(`No pusiste ningun valor base hasta el momento`);
+//   if(typeof bases !== "number") return console.error(`La bases ${bases} no es una bases`);
 
+//   // if(Math.sign(numero) === -1) return console.error(`El valor ${numero} no puede ser negativo`);
 
-/*
-CREAR SOLUCION 3 =
-Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario en un prompt.
-*/
+//   if(bases === 2){
+//     console.log(`El valor ${numero} base ${bases} y su base ${parseInt(numero,bases)} bases 10`);
+//   };
+// };
 
-// let pregunta = parseInt(prompt("Dime tu numero y te lo dare en reversa"));
-
-
-
-// while(pregunta < 30){
-
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-CREAR SOLUCION 4 =
-Escribir utilizando console.log la tabla del 9 hasta 9x10.
-*/
-
-
-
-
-
+// convertirNumerosbases(1110011,2);
   
 
-/*
-CREAR SOLUCION 5 =
-Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, validar que el número ingresado no contenga letras.
-*/
 
 
 
-/*
-CREAR SOLUCION 6 =
-Realizar la suma de todos los números pares entre N y M donde N y M los ingresa un usuario.
-*/
 
 
 
 
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 
-/*
-CREAR SOLUCION 7 =
-Realizar la sumatoria de los primeros N números, donde N es ingresado por el usuario.
-*/
 
+// const montoFinal = (monto = undefined) => {
+//   if(monto === undefined) return console.warn(`No tiene monto porque no tiene compras`);
+//   if(typeof monto !== "number") return console.error(`¿Me esta queriendo pagar con texto?`);
+  
+//   let descuento = 200;
+//   if(descuento % monto){
+//     console.log(`Tu compras son $${monto} pero como estamos descuentando, te descontare 20% que seria en total ${monto - descuento}`)
+//   }
+// }
+// montoFinal(1000);
 
 
+// const montoFinal = (monto = undefined,descuento = undefined) =>{
+//   if(!monto) return console.warn(`No se ha puesto ningun valor numerico`);
+//   if(typeof monto !== "number") return console.error(`El valor ${monto} no es un numero`);
+//   if(monto === 0) return console.error(`Lo siento pero no aceptamos valor 0`);
 
-/*
-CREAR SOLUCION 8 =
-Realizar el factorial de los primeros N números.
-*/
+//   if(!descuento) return console.warn(`No se ha puesto ningun valor de descuento`);
+//   if(typeof descuento !== "number") return console.error(`El valor de descuento ${descuento} no es un numero`);
+//   if(Math.sign(descuento) === -1) return console.error(`El descuento ${descuento} no puede ser negativo`);
 
 
+//   return console.log(`$${monto} - ${descuento}% = ${monto - (monto * descuento) / 100} `)
+// }
 
+// montoFinal(1000,20);
 
 
 
 
+// 17) (TRUE) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
+// const fechaValida = (fecha = undefined) => {
+//   if(!fecha) return console.warn(`No pusiste una fecha`);
+  
+//   let fechaActual = new Date().getFullYear();
+//   let resultado = fechaActual - fecha.getFullYear();
 
+//   return (Math.sign(resultado) === 1)
+//   ? console.log(`han pasado ${Math.abs(resultado)} años desde el año ${fecha.getFullYear()} hasta el ${fechaActual}`)
+//   : (Math.sign(resultado) === -1)
 
+//   ? console.log(`Tendrian que pasar ${Math.abs(resultado)} años para llegar al año ${fecha.getFullYear()}`)
+//   : console.log(`No podes poner el mismo año`);
+// }
 
+// fechaValida(new Date(2025,03,03));
 
 
 
 
 
+// 18)(TRUE) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 
 
+// console.group("vocales y consonantes");
 
+// const cadena = (palabras = undefined) => {
+//   if(!palabras) return console.warn(`No pusiste texto para validar vocales o consonantes`);
+//   if(typeof palabras !== "string") return console.error(`Los valores ${palabras} no son textos`);
+//   if(!palabras) return console.warn(`No pusiste texto para validar consonantes`);
 
+//   let vocalesRegExp = /[aeiouAEIOU]/;
+//   let correoInvalido = /[@*.{}?¡!]/i;
+//   let consonantesRegExp = /[bcdfghjklmnñpqrstwxyzBCDFGHJKLMNÑPQRSTWXYZ]/;
 
+//   let vocales = 0;
+//   let consonantes = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// includes //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Que la funcion nos devuelva:
-/* Profesor asignado de la materia
-Nombre de los alumnos
-Funcion que nos indique cuantas clases enta cofla 
-Nombre de esas clases y sus profesores */
-
-// const obtenerInformacion = (materia) =>{
-//   let materias = {
-//     fisica:["Alejandro","Pedro","cofla","maria","manuel"],
-//     programacion:["Dalto","cofla","pedro","Maria","esteban"],
-//     logica:["Maximo","cofla","armando","estebanquito","juan"],
-//     quimica:["Daniel","cofla","armando","estebanquito","juan"],
+//   for(palabra of palabras){
+//     if(vocalesRegExp.test(palabra)){vocales++};
+//     if(consonantesRegExp.test(palabra)){consonantes++};
 //   } 
-//   if(materias[materia] !== undefined){
-//     return [materias[materia],materia];
+
+//   for(correo of palabras){
+//     if(correoInvalido.test(correo)){console.error(`No adminimos los simbolos ${correoInvalido} de correos electronicos`)};
 //   }
-// }
-//   let mostrarInformacion = obtenerInformacion("fisica")[0]
-//   document.write(mostrarInformacion)
 
 
 
+//   console.info(`La cadena ${palabras} tiene ${vocales} vocales y ${consonantes} consonantes.`);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const notas = (numeros) =>{
-//   let nota = prompt("Introduce tu nota");
-//   for(let i = 0 ; 0 < nota ; i++){
-//     if(numeros && nota <= 4){
-//       alert("Insuficiente");
-//     }
-//     else if(numeros && nota <= 5){
-//       alert("Regular");
-//     }
-//     else if(numeros && nota <= 7){
-//       alert("Suficiente");
-//     }
-//     else if(numeros && nota <= 9){
-//       alert("Avanzado");
-//     }
-//     else if(numeros && nota <= 10){
-//       alert("Sobresaliente");
-//     }
-//   }
 // }
 
-
-// notas(0);
-
-
-
-
+// cadena();
+// cadena(232193);
+// cadena("hola como estas");
+// cadena("franciscoreynolds12@gmail.com");
 
 
+// console.groupEnd("vocales y consonantes");
 
 
+ // (vocalesRegExp.test(palabras))
+  // ? console.log(`${palabras} + vocales == ${vocales.vocalesRegExp.test(palabras)}`)
+  // : (consonantesRegExp.test(palabras))
 
-// let nombres = ["HOLA" , "como", "estas" , "Hola" , "deporte" , "mozilla"];
-//   document.write(nombres + "<br>"); 
-
-
-// const resultado = nombres.slice(0,-2);
-// document.write(resultado)
+  // ? console.log(`${palabras} + consonantes == ${consonantesRegExp.test(palabras)}`)
+  // : console.warn(`Ten cuidado amigo`);
 
 
 
 
 
-// let free = false;
 
 
-// const validarCliente= (time) =>{
-//   let pregunta = prompt("¿Cual es tu edad");
-//   if(pregunta > 18){
-  //     if(time >= 2 && time < 4 && free == false){
-//       alert("Pasa amigo porque sos la primera persona despues de las 2AM");
-//       free = true;
-//     } 
-//     else{
-  //       alert(`son las ${time} hs por ende tendras que pagar la entrada`);
-//     } 
-//   }
-//     alert("Lo siento amigo pero sos menor de edad");
-//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 19) (TRUE) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+// const nombreValido = (nombre = "") => {
+//   if(!nombre) return console.warn(`No has puesto nada en la cadena`);
+//   if(typeof nombre !== "string") return console.error(`El valor ${nombre} no es un texto`);
+
+//   let regExp = /^[A-Za-zÑñaeiouAEIOU\s] + $/g.test(nombre);
+
+//   return (regExp)
+//   ? console.log(`El valor ${nombre} es un nombre valido`)
+//   : console.warn(`El valor ${nombre} no es un nombre valido`);
 // }
 
-// validarCliente(3);
-// validarCliente(7);
-// validarCliente(10);
-// validarCliente(23);
+// nombreValido("francisco");
 
 
 
-//-Maximo de 10% de ausencias.
-// let cantidad = prompt("¿Cuantos alumnos son?");
-// let alumnosTotales = [];
 
-// for (let i = 0; i < cantidad ; i++){
-  //   alumnosTotales[i] = [prompt("Nombre de alumnos " + (i+1)),0];
-  // }
 
-// const tomarAsistencia = (nombre,p)=>{
-  //   let presencia = prompt(nombre);
-//     if(presencia == "p" || presencia == "P"){
-  //       alumnosTotales[p][1]++;
-  //     }
-  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 20)(TRUE) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+
+
+// const correoValido = (correo = "") => {
+//   if(!correo) return console.warn(`El correo esta vacio`)
+//   if(typeof correo !== "string") return console.error(`El valor ${correo} no es un correo`);
+
+//   let regExp = /[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo);
+
+//   return (regExp)
+//   ? console.log(`El correo ${correo} es valido`)
+//   : console.warn(`El correo ${correo} no es valido`);
+// }
+
+// correoValido();
+// correoValido(231);
+// correoValido("franciscoreynolds12@gmail.com");
+// correoValido("franciscoreynolds12gmail.com");
+
+
+// /[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test
+
+
+// En el video 40 te daré mi solución, antes de verlo trata de resolver los ejercicios, y comparte tus resultados en alguna plataforma como GitHub o CodePen y comparte el enlace de tus soluciones en los comentarios de este video. 
+
+
+
+
+
+
+
+
+
+
+
+// 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+// const arrayNumerico = (array = undefined) =>{
+//   if(!array) return console.warn(`No pusiste contenido`);
+//   if(!(array instanceof Array)) return console.error(`El valor ingresado no es un array`);
+
+//   for(let num of array){
+//     if(typeof num !== "number") return console.warn(`No pasaste ningun numero`); 
+//   }
+
+//   const newArrr = array.map(el => el * el);
+
+//   return console.info(`El array original es ${array} y el array elevado al cuadrado es ${newArrr}`);
+// }
+
+// arrayNumerico();
+// arrayNumerico(21);
+// arrayNumerico([10,230,120]);
+
+
+
+// 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+// Nada profundo sucede en tu vida cuando permaneces en tu zona de confort
+
+
+
+
+
+
+
+
+
+
+
+// 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+
+
+
+
+
+
+
+// La expresión regular que uso para el email en este video /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
+
+
+
+
+
+
+
+
+
+// Operaciones básicas, Tipos de datos, Prompt y Alert
+
+//24)(TRUE) Escribir un programa que muestre un prompt donde el usuario ingresa un número, luego muestra otro prompt pidiendo otro número, finalmente el programa muestra una alerta con el resultado de la suma.
+
+// let pregunta1 = parseInt(prompt(`Dime el primer numero`));
+// let pregunta2 = parseInt(prompt(`Dime el segundo numero`));
+
+
+// const suma = () => {
+//   if(!pregunta1) return console.warn(`No pusiste el primer dato`);
+//   if(typeof pregunta1 !== "number") return console.error(`Este dato ${pregunta1} no es un numero`);
   
-  // for (let i = 0; i < 30 ; i++){
-    //   for(alumno in alumnosTotales){
-      //     tomarAsistencia(alumnosTotales[alumno][0],alumno);
-      //   }
-// }
-
-// for (alumno in alumnosTotales){
-//   let resultado = `${alumnosTotales[alumno][0]}:<br>
-//   ___________Presentes ${alumnosTotales[alumno][1]}<br>
-//   ___________Ausentes ${30 - alumnosTotales[alumno][1]}`;
-//   if(30 - alumnosTotales[alumno][1] > 18){
-//     resultado += "<b>Reprobado por inasistencias</b><br>";
-//   }
-//   else{
-//     resultado +="<br><br>";
-//   }
-//   document.write(resultado);  
-
-// }
-
-
-
-//   else{
-
-// class Animal{
-//   constructor(especie,edad,color){
-//     this.especie = especie;    
-//     this.edad = edad;
-//     this.color = color;
-//     this.info =`soy ${this.especie} y tengo ${this.edad} años y soy de color ${color}<br>`;
-//   }
-//   verInfo(){
-//     document.write(this.info + "<br>");
-//   }
-// }
-// class Perro extends Animal{
-//   constructor(especie,edad,color,raza){
-//     super(especie,edad,color);
-//     this.raza = null;
-//   }  
-//   set setRaza(NewName){
-//     this.raza = NewName;
-//   }
-//   get getRaza(){
-//     return this.Raza;
-//   }
-// }
-
-
-// const perro =  new Perro("perro",12,"marron","Doberman");
-// const gato =   new Animal("gato" ,10,"negro");
-// const pajaro = new Animal("pajaro",10,"celeste");
-
-
-// perro.setRaza = "Francisco";
-// document.write(perro.getRaza)
-
-
-
-// CREAR SOLUCIONES //
-// crear un sistema para mostrarle a cofla las particularidades de los 3 celulares //
-// Cada celular debe tener color , peso , resolucion  de pantalla , RDcamara y memoria ram //
-// Cada celular debe poder prender , reiniciar , apagar , tomar fotos y grabar //
-
-// class Celular {
-//   constructor(color,peso,rdp,rdc,ram){
-//     this.color = color;
-//     this.peso = peso;
-//     this.resolucionDePantalla = rdp;
-//     this.resolucionDeCamara = rdc;
-//     this.memoriaRam = ram;
-//     this.encendido = false;  
-//   }
-
-//   prender(){
-//     if(this.encendido == false){
-//       alert("Encendiendo celular");
-//       this.encendido = true;
-//     }
-//     else{
-//       alert("El celular se esta encendiendo");
-//     }
-//   }
+//   if(!pregunta2) return console.warn(`No pusiste el segundo dato`);
+//   if(typeof pregunta2 !== "number") return console.error(`Este dato ${pregunta2} no es un numero`);
   
-//   reinciar(){
-//     if(this.encendido == true){
-//       alert("reiniciando celular");
-//     }
-//     else{
-//       alert("El celular se esta reiniciando");
-//     }
-//   }
+//   let resultado = pregunta1 + pregunta2;
+
+//   return(resultado)
+//   ? console.log(`${pregunta1} y ${pregunta2} = ${resultado}`)
+//   : console.warn(`No se cumplio la condicion`);
+// } 
+
+// suma();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//25) Crear un programa donde el usuario ingrese en un prompt la temperatura en Celcius y el programa muestre en una alerta la temperatura en Fahrenheit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//26)(TRUE) Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 10 igual 0.5
+
+// let pregunta = parseInt(prompt(`Dime un numero y te lo dividire por 10`));
+
+// const numeroDividido = (numero = undefined) => {
+//   if(!pregunta) return console.warn(`No pusiste datos`);
+//   if(typeof pregunta !== "number") return console.error(`Los datos ${pregunta} no son numeros`);
+
+//   let resultado = numero;
+//   let result = resultado = 10;
+//   let resultadoFinal = pregunta / result;
+
+//   return (resultadoFinal)
+//   ? console.log(`${pregunta} / ${result} == ${resultadoFinal}`)
+//   : console.warn(`La condicion no se cumplio`);
+// }
+
+// numeroDividido();
+
+
+
+
+
+
+
+
+// If and else
+
+//27) Crear un programa que determine si un número introducido en un Prompt es par o no, la respuesta será mostrada en una alerta.
+
+// let pregunta = parseInt(prompt(`Poneme cualquier numero y te dire si es par o impar`));
+
+// const numeros = (numero = undefined) => {
+//   if(!pregunta) return console.warn(`El dato no se ha puesto`);
+//   if(typeof pregunta !== "number") return console.error(`El dato ${pregunta} no es un numero`);
+
+//   let number = numero = 2;
+//   let resultado = pregunta % number;
+
+//   return (pregunta % number)
+//   ? console.log(`${pregunta} / ${number} == ${pregunta / number} || resto ${resultado} es par `)
+//   : console.log(`${pregunta} / ${number} == ${pregunta / number} || ${resultado} es impar`);
+
+// }
+
+// numeros();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//28)(TRUE) Crear un programa que determine si un número introducido en un Prompt es divisible por 5 o no, mostrar el resultado con console.log
+
+// let pregunta = parseInt(prompt(`Dime cualquier numero y te lo dividire por 5`));
+
+// const numeroDivisible = (numero = undefined) => {
+//   if(!pregunta) return console.warn(`El dato no has puesto`);
+//   if(typeof pregunta !== "number") return console.error(`El valor ${pregunta} no es un numero`);
+
+//   numero = 5;
+//   let resultado = pregunta / numero;
+
+//   return (Math.sign(pregunta / numero) === 0 || (pregunta % numero) === 0)
+//   ? console.warn(`Este ${numero} es divisible por ${pregunta} ya que ${pregunta} / ${numero} === ${resultado} || resto ${pregunta % numero}`)
+//   : console.warn(`Este ${numero} no es divisible ya que ${pregunta} / ${numero} === ${resultado} === ${pregunta % numero}`);
+
+// }
+
+// numeroDivisible();
+
+
+
+
+
+
+
+
+//29) (TRUE) Crear un programa que determine si un número introducido en un popup es divisible por 11 y 5 o no, mostrar el resultado con console.log
+
+// try{
   
-//   apagar(){
-//     if(this.encendido == true){
-//       alert("Apagando celular");
-//       this.encendido = false;
-//     }
-//     else{
-//       alert("El celular se esta apagando");
-//     }
-//   }
-//   tomarFotos(){
-//     alert(`La resolucion de la foto fue ${this.resolucionDeCamara}`);
-//   }
+//   let pregunta1 = parseInt(prompt(`Dime el primero numero y te dire si es divisible con 11`))
+//   let pregunta2 = parseInt(prompt(`Dime el primero numero y te dire si es divisible con 5`))
   
-//   grabarVideos(){
-//     alert(`La resolucion del video fue de ${this.resolucionDeCamara}`);
-//   }
-//   info(){
-//     return `
-//       color: <b>${this.color}</b><br>
-//       peso: <b>${this.peso}</b><br>
-//       resolucion de pantalla: <b>${this.resolucionDePantalla}</b><br>
-//       resolucion de camara: <b>${this.resolucionDeCamara}</b><br>
-//       memoria Ram:<b>${this.memoriaRam}</b><br>`;
-//     }
-// }
-
-
-
-// class CelularAltaGama extends Celular{
-//   constructor(color,peso,rdp,rdc,ram,rdce){
-//     super(color,peso,rdp,rdc,ram);
-//     this.resolucionDeCamaraExtra = rdce;
-//   }
-//   grabarVideoLento(){
-//     alert("Esta grabando a camara lenta");
-//   }
-//   reconocimientoFacial(){
-//     alert("Vamos a iniciar un reconocimiento facial");
-//   }
-//   infoAltaGama(){
-//     return this.info() + `Resolucion de camara extra = ${this.resolucionDeCamaraExtra<br>`;
-//   }
-// }
-
-// const celular1 = new CelularAltaGama("rojo" , "120gr" , "5.2" , "2K" , "32GB" , "<b>Full HD</b>"); 
-// const celular2 = new CelularAltaGama("marron", "120gr",   "5" , "4K" , "16GB" , "<b>Full HD</b>");
-
-// document.write(`
-//   ${celular1.infoAltaGama()} <br>
-//   ${celular2.infoAltaGama()} <br>`)
-
-
-
-// document.write(`
-//   ${celu1.info()};
-//   ${celu2.info()};
-//   ${celu3.info()};
-// `)
-
-
-//   const celu1 = new Celular("rojo" ,  "5gr"  , "5", "FullHD" , "8GB");
-//   const celu2 = new Celular("negro" , "10gr" , "5", "FullHD" ,"16GB");
-//   const celu3 = new Celular("amarillo","15gr", "5", "FullHD" ,"32GB");
-
-
-
-
-
-
-
-
-
-
-
-//despues de que aparesca las caracteristicas del celular creamos un alert en cual diga el precio del celular //
-// const sumar = (num1,num2) =>{
-//   return parseInt(num1) + parseInt(num2);
-// }
-// const resta = (num1,num2) =>{
-//   return parseInt(num1) - parseInt(num2);   
-// }
-// const multiplicar = (num1,num2) =>{
-//   return parseInt(num1) * parseInt(num2);
-// }
-// const division = (num1,num2) =>{
-//   return parseInt(num1) / parseInt(num2);
-// }
-// const potenciación = (num1,num2) =>{
-//   return parseInt(num1) ** parseInt(num2);
-// }
-
-// alert("¿Que operacion desea realizar?")
-// let operaciones = prompt("1 = sumar , 2 = restar , 3= multiplicar , 4= dividir , 5:potenciación");
-
-
-// if(operaciones == 1){
-//   let numero1 = prompt("Primer numero para sumar"); 
-//   let numero2 = prompt("Segundo numero para sumar"); 
-//   resultado = sumar(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-
-// else if(operaciones == 2){
-//   let numero1 = prompt("Primer numero para restar");
-//   let numero2 = prompt("Segundo numero para restar")
-//   resultado = resta(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-
-// else if(operaciones == 3){
-//   let numero1 = prompt("Primer numero para multiplicar");
-//   let numero2 = prompt("Segundo numero para multiplicar")
-//   resultado = multiplicar(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-
-// else if(operaciones == 4){
-//   let numero1 = prompt("Primer numero para dividir");
-//   let numero2 = prompt("Segundo numero para dividir")
-//   resultado = division(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-
-// else if(operaciones == 5){
-//   let numero1 = prompt("Primer numero para potenciacion");
-//   let numero2 = prompt("Segundo numero para potenciacion")
-//   resultado = potenciación(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-
-// else if(operaciones == 6){
-//   let numero1 = prompt("Primer numero para restar");
-//   let numero2 = prompt("Segundo numero para restar")
-//   resultado = resta(numero1,numero2);
-//   alert(`Tu resultado es ${resultado}`);
-// }
-// else{
-//   alert("No se ha encontrado la operacion");
-// }
-
-
-
-
-/* Cofla fue a comprar celulares pero los vendedores no saben nada de lo que venden 
-    Problema A:
-    mostrarle las particularidades de los 3 celulares
-    Cada uno debe tener color,peso,resolucion de pantalla, resolucion de camara y memoria ram.
-    Debe poder prender,reiniciar, tomar fotos y grabar.//SOLUCIONADO //
+  
+  
+//   const numerosDivisibles = (numero1 = undefined , numero2 = undefined) => {
+//     if(!pregunta1) return console.warn(`El primer dato no fue respondido`);
+//     if(typeof pregunta1 !== "number") return console.error(`El valor ${pregunta1} no es un numero`);
     
-    Problema B:
-    Crear un sistema que ayude a cofla para decidir que app descargar.
-    Debe contener la cantidad de descargas en puntuacion y peso.
-    Se debe poder instalar,abrir,cerrar y desistalar.
-  */
+//     if(!pregunta2) return console.warn(`El segundo dato no fue respondido`);
+//     if(typeof pregunta2 !== "number") return console.error(`El valor ${pregunta2} no es un numero`);
 
-// class app{
-//   constructor(descargas,puntuacion,peso){
-//     this.descargas = descargas;
-//     this.puntuacion = puntuacion;
-//     this.peso = peso;
-//     this.iniciada = false;
-//     this.instalada = false;
-//   }
-//   apps(){
-//     return `
-//       <b>descargas:</b>${this.descargas}<br>
-//       <b>puntuacion:</b>${this.puntuacion}<br>
-//       <b>peso:</b>${this.peso}<br>
-//     `};
 
-//   abrir(){
-//     if(this.iniciada == false){
-//       this.iniciada == true;
-//       alert("La app se ha abierto");
+//     numero1 = 11;
+//     numero2 = 5; 
+    
+
+//     if((pregunta1 / numero1) === 0 || (pregunta1 % numero1) === 0){
+//       console.log(`Es ${numero1} divisible ya que ${pregunta1} / ${numero1} === ${pregunta1 / numero1} || resto ${pregunta1 % numero1}`)
+//     }
+//     else{
+//       console.warn(`No es divisible ya que ${pregunta1} / ${numero1} === ${pregunta1 / numero1} || resto ${pregunta1 % numero1}`)
+//     }
+//     if((pregunta2 / numero2) === 0 || (pregunta2 % numero2) === 0){
+//       console.log(`Es ${numero2} divisible ya que ${pregunta2} / ${numero2} === ${pregunta2 / numero2} || resto ${pregunta2 % numero2}`)
+//     } 
+//     else{
+//       console.warn(`No es divisible con ${numero2} ya que ${pregunta2} / ${numero2} === ${pregunta2 / numero2} || resto ${pregunta2 % numero2}`)
 //     }
 //   }
-//   instalar(){
-//     if(this.instalada == false){
-//       this.instalada == true;
-//       alert("La app se ha instalado");
-//     }
-//   }
-//   cerrar(){
-//     if(this.iniciada == true){
-//       this.iniciada == false;
-//       alert("La app se ha cerrado");
-//     }
-//   }
-//   desistalar(){
-//     if(this.iniciada == true && this.instalada == true){
-//       this.instalada == false;
-//       alert("La app se desistalo correctamente");
-//     }
-//   }
-// }
-
-// const aplicaciones1 = new app("500.000" , "4.3" , "120 MB");
-// const aplicaciones2 = new app("200.000" , "3.2" , "150 MB");
-// const aplicaciones3 = new app("80.000" , "7.2" , "200 MB");
-// const aplicaciones4 = new app("8.000" , "7.2" , "200 MB");
-// const aplicaciones5 = new app("83.000" , "7.2" , "200 MB");
-// const aplicaciones6 = new app("900.000" , "7.2" , "200 MB");
-// const aplicaciones7 = new app("100.000" , "7.2" , "200 MB");
-
-// document.write(`
-//   ${aplicaciones1.apps()}<br>
-//   ${aplicaciones2.apps()}<br>
-//   ${aplicaciones3.apps()}<br>
-//   ${aplicaciones4.apps()}<br>
-//   ${aplicaciones5.apps()}<br>
-//   ${aplicaciones6.apps()}<br>
-//   ${aplicaciones7.apps()}<br>
-// `)
-
-
-
-
-// // PROBLEMA B: //
-// const obtenerInformacion = (materia) =>{
-  // materias = {
-  //   fisica:["rosas" , "pedro" ,"maria" , "josefa" , "roberta" , "manuel"],    
-  //   programacion:["Dalto" , "pedro" , "maria" , "josefa" , "roberta" , "manuel" , "cofla"],
-  //   logica:["nelson" , "pedro" , "marisa" , "josefa" , "robert" , "manuel" , "cofla"],
-  //   quimica:["george" , "pedro" , "maria","josefa" , "roberta" , "manuel"],
-  // }
-//   if(materias[materia] !== undefined){
-//     return [materias[materia],materia];
-//   }
-//   else{
-//     return materias;
-//   }
-// }
-
-
-// const mostrarInformacion = (materia) =>{
-//   const informacion = obtenerInformacion(materia);
-//   if(informacion !== false){
-//     let profesor = obtenerInformacion(materia)[0][0];
-//     let alumnos  = obtenerInformacion(materia)[0];
-//     alumnos.shift();
-//     document.write(`
-//       El profesor de ${informacion[1]} es<b>${profesor}</b><br><br>     
-//       Los alumnos son <b>${alumnos}</b><br><br><br>
-//     `);
-//   }
-// }
-// const CantidadDeClases = (alumno) =>{
-//   const informacion = obtenerInformacion();
-//   let cantidadTotalDeClases = 0; 
-//   let clasesPresentes = [];
-//   for(info in informacion){
-//     if(informacion[info].includes(alumno)){
-//       cantidadTotalDeClases++;
-//       clasesPresentes.push([info]);
-//     }
-//   }
-//   return `${alumno} esta en ${cantidadTotalDeClases++} clases<br>
-//   Esta cursando las clases de <b>${clasesPresentes}</b><br>
   
-//   `;
+//   numerosDivisibles();
   
+  
+// }catch(error){
+//   console.error(`Hay un error en tu codigo amigo`);
 // }
 
 
 
-// mostrarInformacion("fisica");
-// mostrarInformacion("quimica");
-// mostrarInformacion("logica");
-// mostrarInformacion("programacion");
 
 
 
-// document.write(CantidadDeClases("cofla") + "<br>");
-// document.write(CantidadDeClases("maria"));
+
+
+
+
+
+
+
+// 30) (TRUE) Crear un programa que le pida al usuario dos números en un Prompt y luego muestre en un alerta el número mayor.
+
+
+
+// let numeroDelUsuario1 = parseInt(prompt(`Dame el primer numero para comparar`));
+// let numeroDelUsuario2 = parseInt(prompt(`Dame el segundo numero para comparar`));
+
+// const numeroMayor = () => {
+
+//   if(!numeroDelUsuario1) return console.warn(`No me diste el primer numero`);
+//   if(typeof numeroDelUsuario1 !== "number") return console.error(`El dato ${numeroDelUsuario1} no es un numero`);
+
+//   if(!numeroDelUsuario2) return console.warn(`No me diste el segundo numero`);
+//   if(typeof numeroDelUsuario2 !== "number") return console.error(`El dato ${numeroDelUsuario2} no es un numero`);
+
+  
+//   if(Math.max(numeroDelUsuario1,numeroDelUsuario2)){
+//     console.log(`El numero mayor es ${Math.max(numeroDelUsuario1,numeroDelUsuario2)}`)
+//   }
+  
+//   if(Math.min(numeroDelUsuario1,numeroDelUsuario2)){
+//     console.log(`El numero menor es ${Math.min(numeroDelUsuario1,numeroDelUsuario2)}`)
+//   }  
+  
+//   let resultado1 = parseInt(numeroDelUsuario1);
+//   let resultado2 = parseInt(numeroDelUsuario2);
+
+//   return((resultado1 === resultado2))
+//   ? console.warn(`No podes comparar el primer dato ${resultado1} y el segundo dato ${resultado2} ya que son iguales`)
+//   : console.warn(`Esta es una advertencia de que dejaron de ser iguales y eso nos sirve para comparar los numeros del primer dato y segundo dato`);
+// }
+
+// numeroMayor();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//31) (TRUE) Crear un programa que le pida al usuario primero un números al usuario a través de un prompt y luego un segundo número para luego mostrar en un alerta el número mayor, esta vez realizar el ejercicio ocupando un if ternario.
+
+// let numeroDelUsuario1 = parseInt(prompt(`Dime el primer numero`));
+// let numeroDelUsuario2 = parseInt(prompt(`Dime el segundo numero`));
+
+ 
+// const validarNumeros = () => {
+//   // Si el usuario no pone nada 
+//   if(!numeroDelUsuario1){console.warn(`No pusiste el primer dato`)};
+//   if(typeof numeroDelUsuario1 !== "number"){console.error(`El primer dato ${numeroDelUsuario1} no es un numero`)};
+//   if(!numeroDelUsuario2){console.warn(`No pusiste el segundo dato`)};
+//   if(typeof numeroDelUsuario2 !== "number"){console.error(`El segundo dato ${numeroDelUsuario2} no es un numero`)};
+
+//   // Si el usuario compara los numeros
+//   let resultadoMayor = Math.max(numeroDelUsuario1,numeroDelUsuario2);
+//   let resultadoMenor = Math.min(numeroDelUsuario1,numeroDelUsuario2);
+
+//   if(Math.max(numeroDelUsuario1,numeroDelUsuario2) && Math.min(numeroDelUsuario1,numeroDelUsuario2)){
+//     console.log(`El numero mayor es ${resultadoMayor}`);
+//     console.log(`El numero menor es ${resultadoMenor}`);
+//   }
+// }
+
+// validarNumeros();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//32) (NO HECHO AL MOMENTO)Crear un programa que determine si un string introducido por un usuario empieza con un número o con una letra.
+
+// const detectarCadena = (textoDelUsuario = undefined) => {
+//   if(textoDelUsuario === undefined){console.warn(`No completaste el campo de texto`)};    
+//   if(textoDelUsuario === 0){console.error(`No podes ejecutar 0 para el campo de texto`)};
+  
+//   let regExp = /[abcdefghijklmnñopqrslwxyz]/.test(textoDelUsuario);
+  
+//   if(typeof textoDelUsuario !== "string" && isNaN(textoDelUsuario)){
+//     console.log(`El dato ${textoDelUsuario} es un numero autentico`)
+//   }else{
+//     console.warn(`El dato ${textoDelUsuario} es un numero en cadena`)
+//   }
+
+//   return(typeof textoDelUsuario !== "string" ==+ regExp)
+//   ? console.log(`El valor ${textoDelUsuario} es una cadena con caracteres`)
+//   : console.warn(`El valor es un numero pero en cadena de texto`);
+// }
+
+// detectarCadena(2002);
+
+
+
+
+
+
+//33) Crear un programa donde se introduzcan los tres ángulos internos de un triángulo y se determine si el triángulo es válido o no.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//34) (TERMINALO PORQUE FALTA) Determinar si una palabra empieza con mayúscula o no.
+
+
+// const verificarPalabra = (palabras = "") => {
+
+//   if(!palabras) return console.warn(`El dato no se ha definido`);
+//   if(typeof palabras !== "string") return console.error(`El dato ${palabras} se ha definido pero de forma incorrecta`);
+  
+
+
+//   let caracteres = palabras.split("");
+
+//   for(let i = 0; i < caracteres.length; i++){
+//     if(caracteres === caracteres.toString().toUpperCase()){
+//       let resultado = caracteres = [i][0]; 
+//       console.log(caracteres)
+//     }    
+//   }
+
+// }
+// verificarPalabra("Hola");
+
+
+
+
+
+// 34.5)(TRUE) Verificar en una funcion si las palabras puestas son mayusculas o no
+
+// const palabrasPuestas = (palabras = "") => {
+//   if(!palabras) return console.warn(`El dato no se ha puesto`);
+//   if(typeof palabras !== "string") return console.error(`Èl dato ${palabras} no es una cadena`)
+
+
+//   return(palabras === palabras.toUpperCase())
+//   ? console.log(`La palabra "${palabras}" empiezan con mayusculas`)
+//   : console.log(`La palabra "${palabras}" no empiezan con mayusculas`)
+// }
+
+// palabrasPuestas("Hola como estas");
+// palabrasPuestas("HOLA COMO ESTAS");
+
+
+
+
+
+
+
+
+
+
+
+
+
+//35) Determinar si un año dado es bisiesto.
+
+
+
+
+
+// Loops
+// ### While
+
+// (TRUE) Mostrar todos los números de 1 a n aumentando de 1 en 1 donde n lo ingresa el usuario en un prompt.
+
+// let pregunta = parseInt(prompt(`Dame un numero random del 0 al 50 y te dare un conteo`));
+
+// const conteoNumeros = () => {
+//   if(!pregunta) return console.warn(`El valor no se completo`);
+//   if(typeof pregunta !== "number") return console.error(`El valor ${pregunta} no es un numero`);
+
+//   let numero = 50;
+  
+//   if(pregunta >= numero) return console.error(`El valor ${pregunta} no puede ser mayor a ${numero}`);
+
+//   while(pregunta <= numero){
+//     console.log(pregunta++) 
+//   }
+// } 
+// conteoNumeros();
+
+
+
+// Mostrar todos los números de 1 a N aumentando de 2 en 2 donde n lo ingresa el usuario en un prompt.
+
+
+let pregunta = parseInt(prompt(`Dame culquier numero desde N hasta 50 y te devolvere un conteo de 2 en 2`));
+let numero = 0;
+
+const numeroConteo = () => {
+  if(!pregunta) return console.warn(`El campo ${pregunta} no se ha completado`)
+  if(typeof pregunta !== "number") return console.error(`El dato ${pregunta} no es un numero`);
+
+  if(pregunta === 50){console.error(`El dato ${pregunta} no puede ser mayor a ${numero}`)};
+
+  while(pregunta >= numero){
+    console.log(numero++);    
+  }
+
+
+}
+
+numeroConteo();
+
+
+// Mostrar todos los números de N a 1 disminuyendo de 1 en 1 donde n lo ingresa el usuario en un prompt.
+
+
+
+
+// Escribir utilizando console.log la tabla del 9 hasta 9x10.
+
+
+
+
+
+
+// Pedir al usuario que ingrese un número en un prompt, hacer la suma de todos los dígitos, validar que el número ingresado no contenga letras.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Realizar la suma de todos los números pares entre N y M donde N y M los ingresa un usuario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Realizar la sumatoria de los primeros N números, donde N es ingresado por el usuario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Realizar el factorial de los primeros N números.
+
+
+
+
+
+
+
+
+
+
+// Ejercicios de divisores con while (o for)
+// Encontrar todos los divisores de un número.
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Determinar si un número ingresado por el usuario en un loop es primo o no, validar que el número ingresado sea mayor o igual a dos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Crear un programa que determine si un número es perfecto o no, (se dice que un número es perfecto si el número es igual a sus divisores, ejemplos 6 = 1 + 2 + 3)
+
+
+
+
+
+
+
+
+
+
+
+// ### Doble loop
+
+// Generar los primeros N números primos, donde n es ingresado por el usuario.
+
+// Generar los primeros N números perfectos.
+
+
+

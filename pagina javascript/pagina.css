@@ -194,7 +194,9 @@ nav{
 @media screen and (min-width:1024px){
   header{
     width: 100%;
+    z-index: 200;
   }
+
 
   header > .container__header{
     max-width: 1200px;
@@ -325,6 +327,32 @@ nav{
   }
 
   /* ENTREGA A DOMICILIO */
+  #section__domicilio{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 4.1%, rgba(255, 255, 255, 0) 42.59%), #FFFFFF;
+  }
+  
+  #section__domicilio > .container__carnes__realistas{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    transform: translateY(-50px);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+  
+  #section__domicilio > .container__carnes__realistas > img{
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  #section__domicilio > .container__carnes__realistas > img:hover{
+    opacity: 0.5;
+  }
+
   .container__domicilio{
     width: 100%;
   }
@@ -333,6 +361,7 @@ nav{
   .container__domicilio > .container__title > h2{
     font-size:50px;
   }
+  
   .container__domicilio > .container__title > h4{
     font-size:17px;
   }
@@ -344,6 +373,131 @@ nav{
     display: flex;
     flex-direction: row;
   }
+
+
+  /* CERTIFICADOS ORGANICOS */
+  #certificados-organicos{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%), #111111;
+    background: #111;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  } 
+
+  #certificados-organicos > .container__certificados{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 85vh;
+    max-width: 1200px;
+    margin: auto;
+  }
+  #certificados-organicos > .container__certificados > .container__title{
+    padding: 0px 0px 20px 0px;
+  }
+  
+  #certificados-organicos > .container__certificados > .container__title > h1{
+    font-size: 40px;
+  }
+
+  #certificados-organicos > .container__certificados > .container__title > p{
+    font-size: 17px;
+    opacity: 0.6;
+  }
+
+  .container__certificados-img{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;
+  }
+
+  .container__certificados-img > img{
+    width: 1000px;
+  } 
+
+  /* carne de pastura y carne de feeloot */
+  #carnes{
+    background: #111111;
+    color: #fff;
+    width: 100%;  
+    height: 160vh;
+  }
+  
+  #carnes > .container__carne{
+    transform: translateY(150px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #carnes > .container__carne > .carnes-cards{
+    border: 1px solid #fff;
+    margin: 0px 0px 60px 0px;
+    width: 1200px;
+    padding:60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #carnes > .container__carne > .carnes-cards > .container__img-carnes > img{
+    width: 350px;
+  }
+
+  #carnes > .container__carne > .carnes-cards > .container__information > p{
+    width:600px;
+    font-weight: 300;
+    margin-block: 13px;
+
+  }
+  #carnes > .container__carne > .carnes-cards > .container__information > h2{
+    font-size: 30px;
+
+  }
+
+  #carnes > .container__carne > .carnes-cards > .container__information > button{
+    padding: 15px;
+    width: 160px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
